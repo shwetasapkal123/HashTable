@@ -13,7 +13,7 @@ namespace HashTable
             Console.WriteLine("WEL-COME In Hash Table");
             MyMapNode<string, string> hash = new MyMapNode<string, string>(20);
             Console.WriteLine(hash.IsEmpty());
-            hash.Add("0", "Paranoids");
+            hash.Add("0", "paranoids");
             hash.Add("1", "are");
             hash.Add("2", "not");
             hash.Add("3", "paranoid");
@@ -31,23 +31,13 @@ namespace HashTable
             hash.Add("15", "paranoid");
             hash.Add("16", "avoidable");
             hash.Add("17", "situations");
-            Console.WriteLine(hash.GetV("5"));
-            Console.WriteLine(hash.GetV("0"));
+           // Console.WriteLine(hash.GetV("5"));
+           // Console.WriteLine(hash.GetV("0"));
             Console.WriteLine($"size is: {hash.Getsize()}");
-
-            string output = hash.GetV("3");
-            int count = 0;
-            for (int i = 0; i < hash.Getsize(); i++)
-            {
-                string temp = hash.GetV($"{i}");
-                if (output == temp)
-                {
-                    count++;
-                }
-            }
-            Console.WriteLine($"frequency of {output} is : {count}");
+            hash.Remove("16");
+            Console.WriteLine($"size is: {hash.Getsize()}");
             Console.ReadLine();
         }
     }
-    
+
 }
