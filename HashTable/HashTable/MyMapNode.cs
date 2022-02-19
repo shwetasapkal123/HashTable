@@ -71,6 +71,17 @@ namespace HashTable
                 }
             }
         }
+        public bool IsEmpty()
+        {
+            if (Getsize() <= 0)
+                return true;
+            else
+                return false;
+        }
+        public int Getsize()
+        {
+            return size;
+        }
     }
     public struct KeyValue<k, v>
     {
